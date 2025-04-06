@@ -1,0 +1,11 @@
+
+.nav {
+	position: sticky;
+	background-color: #242331;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	height: 55px;
+	padding-left: 25px;
+	font-family: "League Gothic", sans-serif;
+}
