@@ -1,22 +1,21 @@
-
-.login-wrapper {
+.login-wrapper{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 }
   
-.login-form-container {
+.login-form-container{
 	background-color: #FFFFFF;
 	width: 100%;
 	height: 100%;
-	max-width: 750px;
-	max-height: 500px;
+	max-width: 600px;
+	max-height: 550px;
 	padding: 20px;
 	border-radius: 10px;
 }
   
-#header {
+#header{
 	color: #242331;
 	font-size: 52px;
 	text-align: center;
@@ -24,7 +23,7 @@
 	font-weight: 500;
 }
 
-.inputs {
+.inputs{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -33,7 +32,7 @@
 	width: 100%;
 }
 
-.labels {
+.labels{
 	color: #242331;
 	font-size: 14px;
 	font-family: "League Gothic", sans-serif;
@@ -44,7 +43,7 @@
 	max-width: 320px;
 }
   
-.input-box {
+.input-box{
 	border-radius: 10px;
 	width: 100%;
 	max-width: 300px;
@@ -53,9 +52,10 @@
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin-bottom: 10px;
+	border-color: #242331;
 }
   
-#login-button {
+#login-btn{
 	width: 100%;
 	height: 50px;
 	max-width: 325px;
@@ -65,4 +65,40 @@
 	margin: 20px auto 0;
 	display: block;
 	border: none;
+}
+
+#keyline{
+	width: 55%;
+	height: 1px;
+	background-color: #e9e8e8;
+	margin: 35px auto;
+}
+
+.footer-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#create-btn{
+	margin-right: 65px;
+	font-weight: bold;
+	background-color: #FF9F1C;
+	padding: 2%;
+	color: #242331;
+	border-radius: 10px;
+	border: none;
+}
+
+#forgot-pass-btn{
+	font-weight: bold;
+	padding: 2%;
+	color: #242331;
+	border-radius: 10px;
+	border: none;
+	background-color: #e9e8e8;
+}
+
+#forgot-pass-btn:hover, #create-btn:hover{
+	text-decoration: underline;
 }
