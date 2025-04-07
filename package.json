@@ -1,13 +1,12 @@
 {
   "name": "100849882-comp3133-assignment2",
   "version": "0.0.0",
-  "scripts": {
-    "ng": "./node_modules/.bin/ng",
-    "start": "node dist/100849882_comp3133_assignment2/server/server.mjs",
-    "build": "./node_modules/.bin/ng build",
-    "watch": "./node_modules/.bin/ng build --watch --configuration development",
-    "test": "./node_modules/.bin/ng test",
-    "serve:ssr": "node dist/100849882_comp3133_assignment2/server/server.mjs"
+"scripts": {
+  "start": "node dist/100849882_comp3133_assignment2/server/server.mjs",
+  "build": "ng build",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+  "serve:ssr": "node dist/100849882_comp3133_assignment2/server/server.mjs"
   },
   "private": true,
   "dependencies": {
