@@ -1,0 +1,109 @@
+.nav {
+	position: sticky;
+	background-color: #242331;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	height: 55px;
+	padding-left: 25px;
+	font-family: "League Gothic", sans-serif;
+	font-weight: 200;
+	font-size: 22px;
+  }
+  
+  .edit-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  .edit-form-container {
+	background-color: #ffffff;
+	width: 100%;
+	height: 100%;
+	max-width: 900px;
+	max-height: 500px;
+	padding: 20px;
+	border-radius: 10px;
+	overflow-y: auto;
+  }
+  
+  #header {
+	color: #242331;
+	font-size: 52px;
+	text-align: center;
+	font-family: "League Gothic", sans-serif;
+	font-weight: 500;
+  }
+  
+  .inputs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 15px;
+	width: 100%;
+  }
+  
+  .labels {
+	color: #242331;
+	font-size: 14px;
+	font-family: "League Gothic", sans-serif;
+	font-weight: 200;
+	margin-bottom: 10px;
+	text-align: left;
+	width: 100%;
+	max-width: 320px;
+  }
+  
+  .input-box {
+	border-radius: 10px;
+	width: 100%;
+	max-width: 300px;
+	height: 35px;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #242331;
+  }
+  
+  #edit-btn {
+	width: 100%;
+	height: 50px;
+	max-width: 325px;
+	background-color: #242331;
+	color: #ffffff;
+	border-radius: 10px;
+	margin: 20px auto 0;
+	display: block;
+	border: none;
+  }
+  
+  #keyline {
+	width: 55%;
+	height: 1px;
+	background-color: #e9e8e8;
+	margin: 35px auto;
+  }
+  
+  .footer-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  #back-btn {
+	font-weight: bold;
+	padding: 2%;
+	color: #242331;
+	border-radius: 10px;
+	border: none;
+	background-color: #e9e8e8;
+  }
+  
+  #back-btn:hover {
+	text-decoration: underline;
+  }
+  

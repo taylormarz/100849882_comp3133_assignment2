@@ -1,66 +1,70 @@
-<div class="login-wrapper">
-	<div class="login-form-container">
-	  <h1 id="header">EDIT EMPLOYEE</h1>
+<div class="nav">
+	EMPLOYEE MANAGEMENT SYSTEM
+</div>
   
-	  <form (ngSubmit)="updateEmployee()" #editForm="ngForm">
+<div class="edit-wrapper">
+	<div class="edit-form-container">
+		<h1 id="header">EDIT EMPLOYEE</h1>
+
+		<form (ngSubmit)="updateEmployee()" #editForm="ngForm">
 		<div class="inputs">
-		  <label class="labels">FIRST NAME</label>
-		  <input class="input-box" name="first_name" [(ngModel)]="employee.first_name" required />
+			<label class="labels">FIRST NAME</label>
+			<input class="input-box" name="first_name" [(ngModel)]="employee.first_name" required />
 		</div>
-  
+
 		<div class="inputs">
-		  <label class="labels">LAST NAME</label>
-		  <input class="input-box" name="last_name" [(ngModel)]="employee.last_name" required />
+			<label class="labels">LAST NAME</label>
+			<input class="input-box" name="last_name" [(ngModel)]="employee.last_name" required />
 		</div>
-  
+
 		<div class="inputs">
-		  <label class="labels">EMAIL</label>
-		  <input class="input-box" name="email" [(ngModel)]="employee.email" required />
+			<label class="labels">EMAIL</label>
+			<input class="input-box" name="email" [(ngModel)]="employee.email" required />
 		</div>
-  
+
 		<div class="inputs">
-		  <label class="labels">GENDER</label>
-		  <select class="input-box" name="gender" [(ngModel)]="employee.gender" required>
+			<label class="labels">GENDER</label>
+			<select class="input-box" name="gender" [(ngModel)]="employee.gender" required>
 			<option value="" disabled>Select Gender</option>
 			<option>Male</option>
 			<option>Female</option>
 			<option>Other</option>
-		  </select>
+			</select>
 		</div>
-  
+
 		<div class="inputs">
-		  <label class="labels">DESIGNATION</label>
-		  <input class="input-box" name="designation" [(ngModel)]="employee.designation" required />
+			<label class="labels">DESIGNATION</label>
+			<input class="input-box" name="designation" [(ngModel)]="employee.designation" required />
 		</div>
-  
+
 		<div class="inputs">
-		  <label class="labels">DEPARTMENT</label>
-		  <input class="input-box" name="department" [(ngModel)]="employee.department" required />
+			<label class="labels">DEPARTMENT</label>
+			<input class="input-box" name="department" [(ngModel)]="employee.department" required />
 		</div>
-  
+
 		<div class="inputs">
-		  <label class="labels">SALARY</label>
-		  <input class="input-box" type="number" name="salary" [(ngModel)]="employee.salary" required />
+			<label class="labels">SALARY</label>
+			<input class="input-box" type="number" name="salary" [(ngModel)]="employee.salary" required />
 		</div>
-  
+
 		<div class="inputs">
-		  <label class="labels">DATE OF JOINING</label>
-		  <input class="input-box" type="date" name="date_of_joining" [(ngModel)]="employee.date_of_joining" />
+			<label class="labels">DATE OF JOINING</label>
+			<input class="input-box" type="date" name="date_of_joining" [(ngModel)]="employee.date_of_joining" />
 		</div>
-  
+
 		<div class="inputs">
-		  <label class="labels">PHOTO URL</label>
-		  <input class="input-box" name="employee_photo" [(ngModel)]="employee.employee_photo" />
+			<label class="labels">PHOTO URL</label>
+			<input class="input-box" name="employee_photo" [(ngModel)]="employee.employee_photo" />
 		</div>
-  
-		<button id="login-btn" type="submit">Update</button>
-	  </form>
-  
-	  <div id="keyline"></div>
-  
-	  <div class="footer-container">
-		<button id="forgot-pass-btn" (click)="goBack()">Back to List</button>
-	  </div>
+
+		<button id="edit-btn" type="submit">Update</button>
+		</form>
+
+		<div id="keyline"></div>
+
+		<div class="footer-container">
+		<button id="back-btn" (click)="goBack()">Back to List</button>
+		</div>
 	</div>
-  </div>
+</div>
   

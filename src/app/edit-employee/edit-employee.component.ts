@@ -9,7 +9,7 @@ import { EmployeeService } from '../employee/service/employee.service';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './edit-employee.component.html',
-  styleUrls: ['../employee/employee.component.css']
+  styleUrls: ['./edit-employee.component.css']
 })
 export class EditEmployeeComponent implements OnInit {
   eid: string | null = null;
