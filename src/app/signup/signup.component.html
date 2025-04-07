@@ -1,5 +1,5 @@
-<div class="login-wrapper">
-	<div class="login-form-container">
+<div class="signup-wrapper">
+	<div class="signup-form-container">
 	  <h1 id="header">CREATE ACCOUNT</h1>
   
 	  <form (ngSubmit)="onSignup()">
@@ -25,13 +25,11 @@
 		  <p style="color: green;">{{ successMessage }}</p>
 		</div>
   
-		<button id="login-btn" type="submit">SIGN UP</button>
+		<button id="signup-btn" type="submit">SIGN UP</button>
 	  </form>
   
-	  <div id="keyline"></div>
-  
 	  <div class="footer-container">
-		<button id="forgot-pass-btn" (click)="router.navigate(['/login-component'])">Back to Login</button>
+		<button id="back-btn" (click)="router.navigate(['/login-component'])">Back to Login</button>
 	  </div>
 	</div>
   </div>
