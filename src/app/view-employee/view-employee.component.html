@@ -1,44 +1,41 @@
-<div class="login-wrapper">
-	<div class="login-form-container">
-	  <h1 id="header">EMPLOYEE DETAILS</h1>
+<div class="nav">
+	EMPLOYEE MANAGEMENT SYSTEM
+</div>
   
-	  <div class="inputs" *ngIf="employee">
-		<label class="labels">FIRST NAME:</label>
-		<div class="input-box">{{ employee.first_name }}</div>
-  
-		<label class="labels">LAST NAME:</label>
-		<div class="input-box">{{ employee.last_name }}</div>
-  
-		<label class="labels">EMAIL:</label>
-		<div class="input-box">{{ employee.email }}</div>
-  
-		<label class="labels">GENDER:</label>
-		<div class="input-box">{{ employee.gender }}</div>
-  
-		<label class="labels">DESIGNATION:</label>
-		<div class="input-box">{{ employee.designation }}</div>
-  
-		<label class="labels">DEPARTMENT:</label>
-		<div class="input-box">{{ employee.department }}</div>
-  
-		<label class="labels">SALARY:</label>
-		<div class="input-box">{{ employee.salary | currency }}</div>
-  
-		<label class="labels">DATE OF JOINING:</label>
-		<div class="input-box">{{ employee.date_of_joining | date }}</div>
-  
-		<label class="labels">PHOTO:</label>
-		<div class="input-box">
-		  <img *ngIf="employee.employee_photo" [src]="employee.employee_photo" alt="Photo" width="120" style="border-radius: 8px;" />
-		  <span *ngIf="!employee.employee_photo">No photo provided.</span>
+<div class="view-wrapper">
+	<div class="view-container">
+		<h1 id="header">EMPLOYEE DETAILS</h1>
+
+		<div class="inputs" *ngIf="employee">
+			<label class="labels">FIRST NAME:</label>
+			<div class="emp-data">{{ employee.first_name }}</div>
+
+			<label class="labels">LAST NAME:</label>
+			<div class="emp-data">{{ employee.last_name }}</div>
+
+			<label class="labels">EMAIL:</label>
+			<div class="emp-data">{{ employee.email }}</div>
+
+			<label class="labels">GENDER:</label>
+			<div class="emp-data">{{ employee.gender }}</div>
+
+			<label class="labels">DESIGNATION:</label>
+			<div class="emp-data">{{ employee.designation }}</div>
+
+			<label class="labels">DEPARTMENT:</label>
+			<div class="emp-data">{{ employee.department }}</div>
+
+			<label class="labels">SALARY:</label>
+			<div class="emp-data">{{ employee.salary | currency }}</div>
+
+			<label class="labels">DATE OF JOINING:</label>
+			<div class="emp-data">{{ employee.date_of_joining | date }}</div>
 		</div>
-	  </div>
-  
-	  <div id="keyline"></div>
-  
-	  <div class="footer-container">
-		<button id="forgot-pass-btn" (click)="goBack()">Back to List</button>
-	  </div>
+
+		<div id="keyline"></div>
+
+		<div class="footer-container">
+		<button id="back-btn" (click)="goBack()">Back to List</button>
+		</div>
 	</div>
-  </div>
-  
+</div>

@@ -8,7 +8,7 @@ import { EmployeeService } from '../employee/service/employee.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './view-employee.component.html',
-  styleUrls: ['../employee/employee.component.css']
+  styleUrls: ['./view-employee.component.css']
 })
 export class ViewEmployeeComponent implements OnInit {
   employee: any;
