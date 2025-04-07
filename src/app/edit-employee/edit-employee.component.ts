@@ -36,7 +36,7 @@ export class EditEmployeeComponent implements OnInit {
     if (this.eid) {
       this.employeeService.getEmpById(this.eid).subscribe({
         next: (res) => {
-          this.employee = res.data.searchEmployeeById;
+          this.employee = { ...res.data.searchEmployeeById };
         },
         error: (err) => {
           console.error('Error loading employee:', err);
@@ -47,6 +47,12 @@ export class EditEmployeeComponent implements OnInit {
 
   updateEmployee(): void {
     if (!this.eid) return;
+  
+    console.log('Sending update:', {
+      eid: this.eid,
+      employee: this.employee
+    });
+  
     this.employeeService.updateEmp(this.eid, this.employee).subscribe({
       next: () => {
         alert('Employee updated!');
@@ -56,7 +62,7 @@ export class EditEmployeeComponent implements OnInit {
         console.error('Error updating employee:', err);
       }
     });
-  }
+  }  
 
   goBack(): void {
     this.router.navigate(['/employee-component']);
