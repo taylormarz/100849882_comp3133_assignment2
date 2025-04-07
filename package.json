@@ -2,12 +2,12 @@
   "name": "100849882-comp3133-assignment2",
   "version": "0.0.0",
   "scripts": {
-    "ng": "npx ng",
-    "start": "npx ng serve",
+    "ng": "./node_modules/.bin/ng",
+    "start": "node dist/100849882_comp3133_assignment2/server/server.mjs",
     "build": "./node_modules/.bin/ng build",
-    "watch": "npx ng build --watch --configuration development",
-    "test": "npx ng test",
-    "serve:ssr:100849882_comp3133_assignment2": "node dist/100849882_comp3133_assignment2/server/server.mjs"
+    "watch": "./node_modules/.bin/ng build --watch --configuration development",
+    "test": "./node_modules/.bin/ng test",
+    "serve:ssr": "node dist/100849882_comp3133_assignment2/server/server.mjs"
   },
   "private": true,
   "dependencies": {
