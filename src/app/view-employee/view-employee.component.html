@@ -1,0 +1,41 @@
+<div class="nav">
+	EMPLOYEE MANAGEMENT SYSTEM
+</div>
+  
+<div class="view-wrapper">
+	<div class="view-container">
+		<h1 id="header">EMPLOYEE DETAILS</h1>
+
+		<div class="inputs" *ngIf="employee">
+			<label class="labels">FIRST NAME:</label>
+			<div class="emp-data">{{ employee.first_name }}</div>
+
+			<label class="labels">LAST NAME:</label>
+			<div class="emp-data">{{ employee.last_name }}</div>
+
+			<label class="labels">EMAIL:</label>
+			<div class="emp-data">{{ employee.email }}</div>
+
+			<label class="labels">GENDER:</label>
+			<div class="emp-data">{{ employee.gender }}</div>
+
+			<label class="labels">DESIGNATION:</label>
+			<div class="emp-data">{{ employee.designation }}</div>
+
+			<label class="labels">DEPARTMENT:</label>
+			<div class="emp-data">{{ employee.department }}</div>
+
+			<label class="labels">SALARY:</label>
+			<div class="emp-data">{{ employee.salary | currency }}</div>
+
+			<label class="labels">DATE OF JOINING:</label>
+			<div class="emp-data">{{ employee.date_of_joining | date }}</div>
+		</div>
+
+		<div id="keyline"></div>
+
+		<div class="footer-container">
+		<button id="back-btn" (click)="goBack()">Back to List</button>
+		</div>
+	</div>
+</div>

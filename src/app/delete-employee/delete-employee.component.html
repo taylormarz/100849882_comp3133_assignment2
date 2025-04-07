@@ -1,0 +1,25 @@
+<div class="nav">
+	EMPLOYEE MANAGEMENT SYSTEM
+</div>
+  
+<div class="view-wrapper">
+	<div class="view-container">
+		<h1 id="header">DELETE EMPLOYEE</h1>
+
+		<div class="inputs" *ngIf="employee">
+		<label class="labels">FIRST NAME:</label>
+		<div class="emp-data">{{ employee.first_name }}</div>
+
+		<label class="labels">LAST NAME:</label>
+		<div class="emp-data">{{ employee.last_name }}</div>
+
+		<div id="keyline"></div>
+
+		<div class="footer-container">
+		<button id="back-btn" (click)="goBack()">Cancel</button>
+		<button class="btn-delete" (click)="deleteEmployee()">Delete Employee</button>
+		</div>
+	</div>
+</div>
+  
+  

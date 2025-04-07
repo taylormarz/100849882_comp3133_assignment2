@@ -1,0 +1,32 @@
+<div class="signup-wrapper">
+	<div class="signup-form-container">
+	  <h1 id="header">CREATE ACCOUNT</h1>
+  
+	  <form (ngSubmit)="onSignup()" #signupForm="ngForm">
+		<div class="inputs">
+		  <label class="labels">USERNAME:</label>
+		  <input class="input-box" name="username" [(ngModel)]="username" required />
+		</div>
+  
+		<div class="inputs">
+		  <label class="labels">EMAIL:</label>
+		  <input class="input-box" type="email" name="email" [(ngModel)]="email" required />
+		</div>
+  
+		<div class="inputs">
+		  <label class="labels">PASSWORD:</label>
+		  <input class="input-box" type="password" name="password" [(ngModel)]="password" required />
+		</div>
+  
+		<button id="signup-btn" type="submit">Create Account</button>
+	  </form>
+  
+	  <div id="keyline"></div>
+  
+	  <div class="footer-container">
+		<button id="back-btn" (click)="goBack()">Back to Login</button>
+	  </div>
+	</div>
+  </div>
+  
+  
