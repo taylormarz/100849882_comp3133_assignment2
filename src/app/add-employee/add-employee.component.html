@@ -1,8 +1,7 @@
 <div class="nav">EMPLOYEE MANAGEMENT SYSTEM</div>
 
 <div class="main-wrapper">
-  <h1 id="header">ADD EMPLOYEE</h1>
-
+  <h1 id="header">ADD NEW EMPLOYEE</h1>
   <div class="main-container">
     <form (ngSubmit)="submitEmployee()" #addForm="ngForm">
       <div class="inputs">
@@ -23,11 +22,11 @@
       <div class="inputs">
         <label>Gender</label>
         <select class="input-box" name="gender" [(ngModel)]="newEmployee.gender" required>
-			<option value="" disabled selected>Select Gender</option>
-			<option>Male</option>
-			<option>Female</option>
-			<option>Other</option>
-		  </select>		  
+          <option value="" disabled selected>Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>		  
       </div>
 
       <div class="inputs">
@@ -54,7 +53,6 @@
         <label>Photo URL (optional)</label>
         <input class="input-box" name="employee_photo" [(ngModel)]="newEmployee.employee_photo" />
       </div>
-
       <button type="submit" id="add-emp-btn">Submit</button>
     </form>
   </div>

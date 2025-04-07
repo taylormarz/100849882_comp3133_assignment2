@@ -9,7 +9,7 @@ import { EmployeeService } from '../employee/service/employee.service';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './add-employee.component.html',
-  styleUrls: ['../employee/employee.component.css']
+  styleUrls: ['./add-employee.component.css']
 })
 export class AddEmployeeComponent {
   newEmployee = {

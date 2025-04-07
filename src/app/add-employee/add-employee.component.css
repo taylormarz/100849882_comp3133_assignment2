@@ -31,9 +31,11 @@
 	background-color: #FFFFFF;
 	width: 100%;
 	max-width: 850px;
+	max-height: 600px;
 	padding: 30px;
 	border-radius: 10px;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	overflow-y: auto;
   }
   
   .inputs {
