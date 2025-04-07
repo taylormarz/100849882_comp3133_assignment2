@@ -1,0 +1,61 @@
+<div class="nav">EMPLOYEE MANAGEMENT SYSTEM</div>
+
+<div class="main-wrapper">
+  <h1 id="header">ADD EMPLOYEE</h1>
+
+  <div class="main-container">
+    <form (ngSubmit)="submitEmployee()" #addForm="ngForm">
+      <div class="inputs">
+        <label>First Name</label>
+        <input class="input-box" name="first_name" [(ngModel)]="newEmployee.first_name" required />
+      </div>
+
+      <div class="inputs">
+        <label>Last Name</label>
+        <input class="input-box" name="last_name" [(ngModel)]="newEmployee.last_name" required />
+      </div>
+
+      <div class="inputs">
+        <label>Email</label>
+        <input class="input-box" name="email" [(ngModel)]="newEmployee.email" required />
+      </div>
+
+      <div class="inputs">
+        <label>Gender</label>
+        <select class="input-box" name="gender" [(ngModel)]="newEmployee.gender" required>
+			<option value="" disabled selected>Select Gender</option>
+			<option>Male</option>
+			<option>Female</option>
+			<option>Other</option>
+		  </select>		  
+      </div>
+
+      <div class="inputs">
+        <label>Designation</label>
+        <input class="input-box" name="designation" [(ngModel)]="newEmployee.designation" required />
+      </div>
+
+      <div class="inputs">
+        <label>Department</label>
+        <input class="input-box" name="department" [(ngModel)]="newEmployee.department" required />
+      </div>
+
+      <div class="inputs">
+        <label>Salary</label>
+        <input class="input-box" type="number" name="salary" [(ngModel)]="newEmployee.salary" required />
+      </div>
+
+      <div class="inputs">
+        <label>Date of Joining</label>
+        <input class="input-box" type="date" name="date_of_joining" [(ngModel)]="newEmployee.date_of_joining" />
+      </div>
+
+      <div class="inputs">
+        <label>Photo URL (optional)</label>
+        <input class="input-box" name="employee_photo" [(ngModel)]="newEmployee.employee_photo" />
+      </div>
+
+      <button type="submit" id="add-emp-btn">Submit</button>
+    </form>
+  </div>
+</div>
