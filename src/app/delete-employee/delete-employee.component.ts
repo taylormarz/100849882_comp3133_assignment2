@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './delete-employee.component.html',
-  styleUrls: ['../employee/employee.component.css']
+  styleUrls: ['./delete-employee.component.css']
 })
 export class DeleteEmployeeComponent implements OnInit {
   employee: any;
