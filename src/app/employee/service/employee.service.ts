@@ -13,42 +13,74 @@ export class EmployeeService {
     return this.apollo.query({
       query: gql`
         query {
-          getEmployees {
+          listAllEmployees {
             id
-            firstName
-            lastName
-            employeeId
-          }
-        }
-      `
-    });
-  }
-
-  getEmpById(id: string): Observable<any> {
-    return this.apollo.query({
-      query: gql`
-        query($id: String!) {
-          getEmployee(id: $id) {
-            id
-            firstName
-            lastName
-            employeeId
+            first_name
+            last_name
+            email
+            gender
+            designation
+            salary
+            department
+            date_of_joining
+            employee_photo
           }
         }
       `,
-      variables: { id }
+      errorPolicy: 'all'
+    });
+  }
+
+  getEmpById(eid: string): Observable<any> {
+    return this.apollo.query({
+      query: gql`
+        query($eid: ID!) {
+          searchEmployeeById(eid: $eid) {
+            id
+            first_name
+            last_name
+            email
+            gender
+            designation
+            salary
+            department
+            date_of_joining
+            employee_photo
+          }
+        }
+      `,
+      variables: { eid }
     });
   }
 
   addEmp(employee: any): Observable<any> {
     return this.apollo.mutate({
       mutation: gql`
-        mutation($firstName: String!, $lastName: String!, $employeeId: String!) {
-          addEmployee(firstName: $firstName, lastName: $lastName, employeeId: $employeeId) {
+        mutation (
+          $first_name: String!
+          $last_name: String!
+          $email: String!
+          $gender: String!
+          $designation: String!
+          $salary: Float!
+          $department: String!
+          $date_of_joining: String
+          $employee_photo: String
+        ) {
+          createNewEmployee(
+            first_name: $first_name
+            last_name: $last_name
+            email: $email
+            gender: $gender
+            designation: $designation
+            salary: $salary
+            department: $department
+            date_of_joining: $date_of_joining
+            employee_photo: $employee_photo
+          ) {
             id
-            firstName
-            lastName
-            employeeId
+            first_name
+            last_name
           }
         }
       `,
@@ -56,32 +88,51 @@ export class EmployeeService {
     });
   }
 
-  updateEmp(id: string, employee: any): Observable<any> {
+  updateEmp(eid: string, employee: any): Observable<any> {
     return this.apollo.mutate({
       mutation: gql`
-        mutation($id: String!, $firstName: String!, $lastName: String!, $employeeId: String!) {
-          updateEmployee(id: $id, firstName: $firstName, lastName: $lastName, employeeId: $employeeId) {
+        mutation (
+          $eid: ID!
+          $first_name: String
+          $last_name: String
+          $email: String
+          $gender: String
+          $designation: String
+          $salary: Float
+          $department: String
+          $date_of_joining: String
+          $employee_photo: String
+        ) {
+          updateEmployeeById(
+            eid: $eid
+            first_name: $first_name
+            last_name: $last_name
+            email: $email
+            gender: $gender
+            designation: $designation
+            salary: $salary
+            department: $department
+            date_of_joining: $date_of_joining
+            employee_photo: $employee_photo
+          ) {
             id
-            firstName
-            lastName
-            employeeId
+            first_name
+            last_name
           }
         }
       `,
-      variables: { id, ...employee }
+      variables: { eid, ...employee }
     });
   }
 
-  deleteEmp(id: string): Observable<any> {
+  deleteEmp(eid: string): Observable<any> {
     return this.apollo.mutate({
       mutation: gql`
-        mutation($id: String!) {
-          deleteEmployee(id: $id) {
-            id
-          }
+        mutation($eid: ID!) {
+          deleteEmployeeById(eid: $eid)
         }
       `,
-      variables: { id }
+      variables: { eid }
     });
   }
 }

@@ -1,0 +1,38 @@
+<div class="login-wrapper">
+	<div class="login-form-container">
+	  <h1 id="header">CREATE ACCOUNT</h1>
+  
+	  <form (ngSubmit)="onSignup()">
+		<div class="inputs">
+		  <label class="labels">USERNAME:</label>
+		  <input class="input-box" [(ngModel)]="username" name="username" required />
+		</div>
+  
+		<div class="inputs">
+		  <label class="labels">EMAIL:</label>
+		  <input class="input-box" type="email" [(ngModel)]="email" name="email" required />
+		</div>
+  
+		<div class="inputs">
+		  <label class="labels">PASSWORD:</label>
+		  <input class="input-box" type="password" [(ngModel)]="password" name="password" required />
+		</div>
+  
+		<div class="inputs" *ngIf="errorMessage">
+		  <p style="color: red;">{{ errorMessage }}</p>
+		</div>
+		<div class="inputs" *ngIf="successMessage">
+		  <p style="color: green;">{{ successMessage }}</p>
+		</div>
+  
+		<button id="login-btn" type="submit">SIGN UP</button>
+	  </form>
+  
+	  <div id="keyline"></div>
+  
+	  <div class="footer-container">
+		<button id="forgot-pass-btn" (click)="router.navigate(['/login-component'])">Back to Login</button>
+	  </div>
+	</div>
+  </div>
+  
